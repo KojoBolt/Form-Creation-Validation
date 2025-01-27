@@ -6,28 +6,28 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
 
         // Validate user input with trim  
-        const usernameInput = document.getElementById('username').value.trim();
-        const emailInput = document.getElementById('email').value.trim();
-        const passwordInput = document.getElementById('password').value.trim();
+        const username = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
 
         // Assigning validation variables 
         let isValid = true;
         const messages = [];
 
         // Username validation
-        if (usernameInput.length < 3) {
+        if (username.length < 3) {
             isValid = false;
             messages.push("Username must be at least 3 characters long.");
         }
 
         // Email validation
-        if (!emailInput.includes("@") || !emailInput.includes(".")) {
+        if (!email.includes("@") || !email.includes(".")) {
             isValid = false;
             messages.push("Enter a valid email address containing '@' and '.'");
         }
 
         // Password validation
-        if (passwordInput.length < 8) {
+        if (password.length < 8) {
             isValid = false; 
             messages.push("Password must be at least 8 characters long.");
         }
